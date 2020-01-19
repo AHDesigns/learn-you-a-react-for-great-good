@@ -1,3 +1,9 @@
-  .text {
-    color: blue;
-  }
+.button-primary {
+  background-color: coral;
+  color: aqua;
+}
+
+.button-disabled {
+  background-color: slategray;
+  color: white;
+}
