@@ -1,15 +1,20 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
+// import { action } from '@storybook/addon-actions';
 import './style.css';
-import Component from './component';
+import Text from './component';
 
 export default {
   title: '01_Text',
-  component: Component,
+  component: Text,
 };
 
-export const Text = () => (
+export const Main = () => (
   <div className='text'>
-    <Component onClick={action('clicked')} />
+    <p>no heading example:</p>
+    <Text text="Hello Pudding" />
+    <p>heading example:</p>
+    <Text text="Hello Pudding" heading />
+    <p>Angelica example:</p>
+    <Text text="Hello Pudding" angelica />
   </div>
 );
