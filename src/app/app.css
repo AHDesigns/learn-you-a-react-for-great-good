@@ -1,0 +1,40 @@
+div {
+    border: black thin solid;
+}
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;    
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.mainContent {
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 3;
+}
+
+.feedInput {
+    
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    border: coral;
+    flex-grow: 1;
+    justify-content: space-between;
+    text-align: center;
+    flex-basis: 40%;
+
+}
+.onlineUser {
+    flex-grow: 1;
+   
+}

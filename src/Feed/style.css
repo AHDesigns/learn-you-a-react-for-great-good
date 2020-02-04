@@ -1,0 +1,26 @@
+.feed {
+    display: flex;
+    padding: 10px;
+    
+}
+
+.messageWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.messageBox {
+    margin: 10px;
+    padding: 5px;
+    overflow: hidden;
+    max-width: 70%;
+}
+
+.messageBox-Me {
+    align-self: flex-start;
+}
+
+.messageBox-Them {
+    align-self: flex-end;
+}
