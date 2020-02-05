@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 const me = '123456';
@@ -10,52 +10,13 @@ const users = [
     picture: 'url:/...',
   }
 ]
-// https://www.draw.io/#G1zbx8wtys6szbTyDGzAa2gN8Wjy1hLPW_
-/*
-type Messages = Array<{
-  id: string;
-  text: string;
-  clientId: string;
-  timeStamp: unix-timestamp
-}> */
-const messages = [
-  {
-    id: '123',
-    text: 'hellow pudding',
-    clientId: '987234',
-    timeStamp: '1580838486',
-  },
-  {
-    id: '1234',
-    text: 'why hello there pudding',
-    clientId: '123456',
-    timeStamp: '1580838894',
-  },
-  {
-    id: '567',
-    text: 'I am a panda',
-    clientId: '678901',
-    timeStamp: '1580839006',
-  },
-  {
-    id: '890',
-    text: 'I am too a panda',
-    clientId: '234567',
-    timeStamp: '1580839051',
-  },
-  {
-    id: '890',
-    text: 'PANDA do do do, panda do do do',
-    clientId: '234567',
-    timeStamp: '1580839051',
-  }
-]
 
-
-function Component() {
+function Feed({ messages, sendMessage }) {
+  const [userMessage, setUserMessage] = useState("Hello pudding");
   return (
     <div className="feed">
       <div className="messageWrapper">
+
         {messages.map(message => (
           <div className={
             `messageBox messageBox-${me === message.clientId ? 'Me' : 'Them'}`
@@ -65,10 +26,25 @@ function Component() {
           </div>
 
         ))}
+      </div>
+      <div className="feedInput">
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          sendMessage((oldMessages) => oldMessages.concat({
+            text: userMessage
+          }))
+        }
+        }>
+          <label>
+            <textarea value={userMessage} onChange={(e) => { setUserMessage(e.target.value); }} />
+          </label>
+          <button>
 
+          </button>
+        </form>
       </div>
     </div>
   )
 }
 
-export default Component;
+export default Feed;

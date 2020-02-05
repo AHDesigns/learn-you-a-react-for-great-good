@@ -10,9 +10,6 @@ export default function App({ prop }) {
             <div className="main">
                 <div className="mainContent">
                     <Feed />
-                    <div className="feedInput">
-                        <p>Feed input button</p>
-                    </div>
                 </div>
                 <div className="sidebar">
                     <div className="onlineUser">

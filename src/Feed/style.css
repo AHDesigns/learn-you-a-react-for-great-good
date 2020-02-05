@@ -1,13 +1,14 @@
 .feed {
     display: flex;
     padding: 10px;
-    
+    flex-direction: column;
 }
 
 .messageWrapper {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    flex-grow: 1;
 }
 
 .messageBox {
